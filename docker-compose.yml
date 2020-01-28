@@ -464,6 +464,7 @@ services:
         - MYSQL_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
       networks:
         - backend
+      command: mysqld --innodb-flush-method=fsync
 
 ### PostgreSQL ###########################################
     postgres:
